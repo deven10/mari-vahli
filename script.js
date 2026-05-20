@@ -6,13 +6,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const finalGreetingElement = document.getElementById('finalGreeting');
 
     const steps = {
-        step1: document.getElementById('step1'),
+        // step1: document.getElementById('step1'),
         step2: document.getElementById('step2'),
         step3: document.getElementById('step3'),
         step4: document.getElementById('step4'),
     };
 
-    const recipientName = "Sapthesh"; // Customizable Name
+    const recipientName = "Isha (Ichika 🥳)"; // Customizable Name
     const messageGreeting = "Happy Birthday,"; // Customizable Greeting
 
     // --- Utility Function to Transition Steps ---
@@ -25,17 +25,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- Step 1: Welcome Screen Interactions ---
-    startButton.addEventListener('click', () => {
-        transitionToStep('step2');
-        // Autoplay music (often requires user interaction first)
+    // startButton.addEventListener('click', () => {
+    //     transitionToStep('step3');
+    //     // Autoplay music (often requires user interaction first)
+    //     backgroundMusic.play().catch(error => {
+    //         console.log("Autoplay prevented:", error);
+    //         // Optionally, show a play button if autoplay fails
+    //     });
+    // });
+
+    // --- Step 2: Envelope Interactions ---
+    envelopeContainer.addEventListener('click', () => {
         backgroundMusic.play().catch(error => {
             console.log("Autoplay prevented:", error);
             // Optionally, show a play button if autoplay fails
         });
-    });
-
-    // --- Step 2: Envelope Interactions ---
-    envelopeContainer.addEventListener('click', () => {
         envelopeContainer.classList.add('open');
         envelopeContainer.querySelector('.click-instruction').style.opacity = '0'; // Hide instruction
         setTimeout(() => {

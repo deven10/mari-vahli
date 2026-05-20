@@ -267,6 +267,7 @@ body {
     overflow: hidden; /* Hide overflow for typewriter effect */
     border-right: 3px solid var(--accent-yellow); /* Typewriter cursor */
     animation: none; /* Handled by JS for typing */
+    margin-bottom:18px;
 }
 
 /* Typewriter cursor animation (only for final state after typing) */
@@ -280,10 +281,18 @@ body {
     50% { border-color: var(--accent-yellow); }
 }
 
+.cutie {
+    font-size:24px; 
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
 
 .recipient-name {
     font-family: 'Pacifico', cursive;
-    font-size: 4.5rem;
+    font-size: clamp(32px, 5vw, 72px);
     color: var(--accent-yellow);
     margin: 5px 0 20px;
     text-shadow: 3px 3px 8px var(--shadow-medium);
@@ -307,6 +316,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    letter-spacing: 1px;
 }
 
 .heart-icon {
@@ -553,12 +563,19 @@ body {
     .welcome-message { font-size: 1rem; }
     .letter p { font-size: 1rem; }
     .main-greeting { font-size: 2rem; }
-    .recipient-name { font-size: 3.5rem; }
+    /* .recipient-name { font-size: 44px; } */
     .final-wish { font-size: 1rem; }
     .signature { font-size: 1.5rem; }
     .cake { transform: scale(0.8); }
-    .letter { width: 90%; padding: 20px; }
+    .letter { width: 100%; padding: 20px; }
     .envelope { transform: scale(0.8); } /* Scale down envelope */
+
+    .cutie {
+        font-size: 24px !important; 
+    }
+    .celebration-card {
+        margin: 0px 16px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -566,7 +583,7 @@ body {
     .welcome-message { font-size: 0.9rem; }
     .action-button { padding: 10px 20px; font-size: 1rem; }
     .main-greeting { font-size: 1.8rem; }
-    .recipient-name { font-size: 2.8rem; }
+    /* .recipient-name { font-size: 2.8rem; } */
     .final-wish { font-size: 0.9rem; }
     .signature { font-size: 1.2rem; }
     .cake { transform: scale(0.7); }
